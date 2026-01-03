@@ -8,3 +8,7 @@
     max-width: 50rem /* 800px */;
   }
 }
+
+@utility shadow-glow { 
+  box-shadow: 0 0 5px #fea, 0 0 6px #fb1; 
+}
