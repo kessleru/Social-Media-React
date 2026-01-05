@@ -12,3 +12,7 @@
 @utility shadow-glow { 
   box-shadow: 0 0 5px #fea, 0 0 6px #fb1; 
 }
+
+@utility user-icon {
+  background-image: url('./Assets/usuario.svg');
+}
