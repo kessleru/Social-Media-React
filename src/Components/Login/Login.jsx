@@ -12,7 +12,7 @@ const Login = () => {
   if (login === true) return <Navigate to='/conta' />;
 
   return (
-    <section className='grid grid-cols-2 min-h-screen gap-8 before:block before:content-[""] before:bg-login max-sm:grid-cols-1 max-sm:gap-0 max-sm:min-h-[calc(100dvh-4rem)] max-sm:grid-rows-[1fr_auto]'>
+    <section className='grid grid-cols-2 min-h-screen gap-8 before:block before:content-[""] before:bg-login max-sm:grid-cols-1 max-sm:gap-0 max-sm:min-h-[calc(100dvh-4rem)] max-sm:grid-rows-[1fr_auto] [@media_(max-height:800px)]:before:hidden [@media_(max-height:800px)]:grid-cols-1 [@media_(max-height:800px)]:gap-0'>
       <div className='max-w-120 p-4 max-sm:max-w-full'>
         <Routes>
           <Route index element={<LoginForm />} />
