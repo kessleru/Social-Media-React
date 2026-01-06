@@ -15,7 +15,7 @@ const Header = () => {
         {data ? (
           <>
             <Link
-              className='text-neutral-800 flex items-center after:content-[""] after:inline-block after:ml-2 after:w-[14px] after:h-[17px] after:user-icon after:bg-no-repeat after:bg-center after:relative after:-top-0.5px'
+              className='text-neutral-800 flex items-center after:content-[""] after:inline-block after:ml-2 after:w-3.5 after:h-4.25 after:user-icon after:bg-no-repeat after:bg-center after:relative after:-top-0.5px'
               to='/conta'
             >
               {data.nome}
@@ -26,7 +26,7 @@ const Header = () => {
           </>
         ) : (
           <Link
-            className='text-neutral-800 flex items-center after:content-[""] after:inline-block after:ml-2 after:w-[14px] after:h-[17px] after:user-icon after:bg-no-repeat after:bg-center after:relative after:-top-0.5px'
+            className='text-neutral-800 flex items-center after:content-[""] after:inline-block after:ml-2 after:w-3.5 after:h-4.25 after:user-icon after:bg-no-repeat after:bg-center after:relative after:-top-0.5px'
             to='/login'
           >
             Login / Criar

@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
 @import 'tailwindcss';
+
+
 
 @utility container {
   padding: 0 1rem;
@@ -15,4 +18,34 @@
 
 @utility user-icon {
   background-image: url('./Assets/usuario.svg');
+}
+
+@utility bg-login {
+  background: url('./Assets/login.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+@utility title {
+  line-height: 1;
+  font-size: 3rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+@theme {
+  --animate-animeLeft: animeLeft 0.3s ease-in-out forwards;
+
+  --font-first: Helvetica, Arial, sans-serif;
+  --font-second: 'Spectral', georgia;
+
+  @keyframes animeLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
