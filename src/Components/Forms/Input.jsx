@@ -3,7 +3,7 @@ import Error from '../Helper/Error';
 const Input = ({ label, type, name, value, onChange, error, onBlur }) => {
   return (
     <div className='mb-4'>
-      <label className='block text-base pb-2 ' htmlFor={name}>
+      <label className='block text-lg pb-2 ' htmlFor={name}>
         {label}
       </label>
       <input

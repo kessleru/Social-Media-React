@@ -9,11 +9,10 @@ const types = {
   password: {
     regex:
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-    message: `• Oito caracteres
-• Uma letra maiúscula
-• Uma letra minúscula
+    message: `Precisa-se no mínimo de:
+• Oito caracteres
 • Um número
-• Um caractere especial`,
+• Um caractere`,
   },
 };
 
@@ -25,7 +24,7 @@ const useForm = (type) => {
     if (type === false) return true;
 
     if (value.length === 0) {
-      setError('Preencha um valor.');
+      setError('Preencha um valor');
       return false;
     }
 
