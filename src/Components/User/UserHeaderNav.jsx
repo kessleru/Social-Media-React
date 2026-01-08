@@ -17,7 +17,7 @@ const UserHeaderNav = () => {
   }
 
   return (
-    <nav className='grid grid-cols-4 gap-4 *:bg-neutral-100 *:rounded-md *:size-10 *:flex *:items-center *:justify-center *:transition *:duration-150 *:border *:border-transparent *:outline-none *:hover:bg-white *:hover:shadow-[0_0_0_3px_#eee] *:focus:bg-white *:focus:shadow-[0_0_0_3px_#eee] [&_.active]:bg-white [&_.active]:shadow-glow [&_.active]:border-amber-400/50 [&_.active_svg_*]:fill-[#fb1]'>
+    <nav className='grid grid-cols-4 gap-4 *:bg-neutral-100 *:rounded-md *:size-10 *:flex *:items-center *:justify-center *:transition *:duration-150 *:border *:border-transparent *:outline-none *:active:scale-95 *:hover:bg-white *:hover:shadow-[0_0_0_3px_#eee] *:focus:bg-white *:focus:shadow-[0_0_0_3px_#eee] [&_.active]:bg-white [&_.active]:shadow-glow [&_.active]:border-amber-400/50 [&_.active_svg_*]:fill-[#fb1]'>
       <NavLink to='/conta' end>
         <MinhasFotos />
         {mobile && 'Minhas Fotos'}
