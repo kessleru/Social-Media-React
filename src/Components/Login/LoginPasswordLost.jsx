@@ -1,9 +1,5 @@
 const LoginPasswordLost = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default LoginPasswordLost
+export default LoginPasswordLost;
