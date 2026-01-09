@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useForm from '../../Hooks/useForm';
 import useFetch from '../../Hooks/useFetch';
 import Button from '../Forms/Button';
 import Input from '../Forms/Input';
 import { PHOTO_POST } from '../../api';
+import Error from '../Helper/Error';
+import { useNavigate } from 'react-router-dom';
 
 const UserPhotoPost = () => {
   const nome = useForm();
@@ -11,6 +13,11 @@ const UserPhotoPost = () => {
   const idade = useForm('number');
   const [img, setImg] = useState({});
   const { data, error, loading, request } = useFetch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (data) navigate('/conta');
+  }, [data, navigate]);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -33,8 +40,8 @@ const UserPhotoPost = () => {
   }
 
   return (
-    <section className='animate-animeLeft grid grid-cols-2 gap-8 mb-8'>
-      <form onSubmit={handleSubmit}>
+    <section className='animate-animeLeft grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8'>
+      <form onSubmit={handleSubmit} className='order-2 md:order-1'>
         <Input label='Nome' type='text' name='nome' {...nome} />
         <Input label='Peso' type='number' name='peso' {...peso} />
         <Input label='Idade' type='number' name='idade' {...idade} />
@@ -66,16 +73,38 @@ const UserPhotoPost = () => {
             {img.preview ? 'Clique para trocar' : 'Clique para enviar'}
           </span>
         </label>
-        <Button>Enviar</Button>
+        {loading ? (
+          <Button disabled>Enviando...</Button>
+        ) : (
+          <Button>Cadastrar</Button>
+        )}
+        <Error error={error} />
       </form>
-      <div>
+      <div className='sm:order-2'>
         {img.preview && (
-          <div className='aspect-square rounded-md overflow-hidden'>
-            <img
-              className='w-full h-full object-cover object-center block'
-              src={img.preview}
-              alt='Preview'
-            />
+          <div className='flex gap-4 sm:block'>
+            <div className='w-40 h-40 sm:w-full sm:h-80 overflow-hidden rounded-md shrink-0'>
+              <img
+                className='w-full h-full object-cover object-center block'
+                src={img.preview}
+                alt='Preview'
+              />
+            </div>
+            <div className='flex flex-col text-sm sm:hidden'>
+              <p>
+                <span className='font-semibold'>Nome:</span> {nome.value || '-'}
+              </p>
+              <hr className='border-t-2 border-amber-400 my-2' />
+              <p>
+                <span className='font-semibold'>Peso:</span> {peso.value || '-'}{' '}
+                kg
+              </p>
+              <hr className='border-t-2 border-amber-400 my-2' />
+              <p>
+                <span className='font-semibold'>Idade:</span>{' '}
+                {idade.value || '-'} anos
+              </p>
+            </div>
           </div>
         )}
       </div>
