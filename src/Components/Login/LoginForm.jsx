@@ -37,7 +37,7 @@ const LoginForm = () => {
       </form>
       <Link
         to='/login/perdeu'
-        className='inline-block text-neutral-600 py-2 after:h-0.5 after:w-full after:bg-neutral-600 after:block'
+        className='relative inline-block text-neutral-600 mt-2 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-neutral-600 after:transition-[width] after:duration-200 hover:after:w-full'
       >
         Perdeu a Senha?
       </Link>

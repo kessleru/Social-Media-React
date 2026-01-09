@@ -23,7 +23,7 @@ const Header = () => {
           </>
         ) : (
           <Link
-            className='relative inline-flex items-center text-neutral-800 font-semibold select-none transition duration-150 ease-out active:scale-95 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-neutral-800 after:transition-[width] after:duration-200 hover:after:w-full'
+            className='relative inline-flex items-center text-neutral-800 font-semibold select-none transition duration-150 ease-out active:scale-95 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-neutral-800 after:transition-[width] after:duration-200 hover:after:w-full'
             to='/login'
           >
             Login
