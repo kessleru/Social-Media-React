@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { UserContext } from '../../UserContext';
 import PhotoCommentsForm from './PhotoCommentsForm';
 
@@ -6,11 +6,19 @@ const PhotoComments = (props) => {
   const [comments, setComments] = useState(() => {
     return props.comments || [];
   });
+  const commentsSection = useRef(null);
   const { login } = useContext(UserContext);
+
+  useEffect(() => {
+    commentsSection.current.scrollTop = commentsSection.current.scrollHeight;
+  }, [comments]);
 
   return (
     <>
-      <ul className=''>
+      <ul
+        ref={commentsSection}
+        className='overflow-y-auto break-all px-8 *:mb-2 *:leading-[1.2]'
+      >
         {comments.map((comment) => (
           <li key={comment.comment_ID}>
             <b>{comment.comment_author}: </b>
