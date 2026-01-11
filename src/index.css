@@ -49,6 +49,17 @@ body {
   position: relative;
 }
 
+
+@utility bg-login {
+  background:
+    url('./Assets/login.jpg') no-repeat center center,
+    linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size:
+    cover,
+    200% 100%;
+  animation: skeleton-shimmer 1.5s infinite linear;
+}
+
 /* =====================
    THEME
 ===================== */
