@@ -18,6 +18,7 @@ const PhotoComments = (props) => {
       <ul
         ref={commentsSection}
         className='overflow-y-auto break-all px-8 *:mb-2 *:leading-[1.2]'
+        aria-label='Comentários da foto'
       >
         {comments.map((comment) => (
           <li key={comment.comment_ID}>

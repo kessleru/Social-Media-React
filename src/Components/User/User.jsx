@@ -6,14 +6,14 @@ import UserStats from './UserStats';
 
 const User = () => {
   return (
-    <section className='container'>
+    <main className='container mainContainer'>
       <UserHeader />
       <Routes>
         <Route index element={<Feed />} />
         <Route path='postar' element={<UserPhotoPost />} />
         <Route path='estatisticas' element={<UserStats />} />
       </Routes>
-    </section>
+    </main>
   );
 };
 

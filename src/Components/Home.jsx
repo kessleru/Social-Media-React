@@ -2,11 +2,11 @@ import Feed from './Feed/Feed';
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <section className='container mainContainer'>
         <Feed />
       </section>
-    </div>
+    </main>
   );
 };
 

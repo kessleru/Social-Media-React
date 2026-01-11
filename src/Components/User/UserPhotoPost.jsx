@@ -51,10 +51,12 @@ const UserPhotoPost = () => {
           name='img'
           id='img'
           onChange={handleImgChange}
+          accept='image/*'
+          aria-label='Selecionar imagem para upload'
         />
         <label
           htmlFor='img'
-          className='mb-4 flex flex-col items-center justify-center gap-2 w-full py-4 px-4 border-2 border-dashed border-neutral-300 rounded-md cursor-pointer transition-colors duration-150 hover:border-amber-400 hover:bg-neutral-50 text-neutral-500 hover:text-amber-500'
+          className='mb-4 flex flex-col items-center justify-center gap-2 w-full py-4 px-4 border-2 border-dashed border-neutral-300 rounded-md cursor-pointer transition-colors duration-150 hover:border-amber-400 hover:bg-neutral-50 text-neutral-500 hover:text-amber-500 focus-within:ring-2 focus-within:ring-amber-500 focus-within:ring-offset-2 focus-within:border-amber-400'
         >
           <svg
             className='w-8 h-8'

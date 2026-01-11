@@ -13,7 +13,6 @@ const PhotoCommentsForm = ({ id, setComments }) => {
     event.preventDefault();
     const { url, options } = COMMENT_POST(id, { comment });
     const { response, json } = await request(url, options);
-    console.log(json);
     if (response.ok) {
       setComment('');
       setComments((comments) => [...comments, json]);
@@ -22,18 +21,24 @@ const PhotoCommentsForm = ({ id, setComments }) => {
 
   return (
     <form
-      className='grid grid-cols-[1fr_auto] items-stretch m-4'
+      className='grid grid-cols-[1fr_auto] items-stretch m-4 gap-2'
       onSubmit={handleSubmit}
     >
       <textarea
-        className='block w-full font-first resize-none border border-neutral-100 p-2 rounded-md bg-neutral-100 transition duration-150 focus:outline-none focus:border-amber-400/50 focus:shadow-glow hover:outline-none hover:border-amber-400/50 hover:shadow-glow'
+        className='block w-full font-first resize-none border border-neutral-200 p-2 rounded-md bg-neutral-100 transition duration-150 focus:outline-none focus:border-amber-400 focus:shadow-glow focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-1 hover:border-amber-400/50 hover:shadow-glow'
         id='comment'
         name='comment'
         placeholder='Comente...'
         value={comment}
         onChange={({ target }) => setComment(target.value)}
+        aria-label='Escreva seu comentário'
+        rows={2}
       />
-      <button className={styles.comment}>
+      <button
+        className={styles.comment}
+        type='submit'
+        aria-label='Enviar comentário'
+      >
         <Enviar />
       </button>
       <Error error={error} />

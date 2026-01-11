@@ -11,8 +11,7 @@ const FeedPhotos = ({ setModalPhoto }) => {
   useEffect(() => {
     async function fetchPhotos() {
       const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 });
-      const { json } = await request(url, options);
-      console.log(json);
+      await request(url, options);
     }
     fetchPhotos();
   }, [request]);
@@ -21,7 +20,11 @@ const FeedPhotos = ({ setModalPhoto }) => {
   if (loading) return <Loading />;
   if (data)
     return (
-      <ul className='animate-animeLeft grid grid-cols-3 gap-4 mb-4 justify-center max-sm:grid-cols-2'>
+      <ul
+        className='animate-animeLeft grid grid-cols-3 gap-4 mb-4 justify-center max-sm:grid-cols-2'
+        role='list'
+        aria-label='Galeria de fotos'
+      >
         {data.map((photo) => (
           <FeedPhotosItem
             key={photo.id}

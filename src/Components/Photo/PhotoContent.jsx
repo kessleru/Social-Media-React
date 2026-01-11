@@ -12,14 +12,17 @@ const PhotoContent = ({ data }) => {
       </div>
       <div className='px-8 pt-8'>
         <div>
-          <p className='opacity-50 mb-4 flex justify-between items-center'>
+          <p className='text-neutral-500 mb-4 flex justify-between items-center'>
             <Link
               to={`/perfil/${photo.author}`}
-              className='hover:underline hover:underline-offset-2'
+              className='hover:underline hover:underline-offset-2 hover:text-amber-600 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-sm'
             >
               @{photo.author}
             </Link>
-            <span className="flex items-center before:size-4 before:view-icon-black before:inline-block before:mr-1">
+            <span
+              className='flex items-center before:size-4 before:view-icon-black before:inline-block before:mr-1'
+              aria-label={`${photo.acessos} visualizações`}
+            >
               {photo.acessos}
             </span>
           </p>
