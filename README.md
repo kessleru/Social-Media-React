@@ -18,8 +18,9 @@ Uma rede social completa para compartilhamento de fotos de cachorros, desenvolvi
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="readme_photos/Photo01.jpg" alt="Screenshot 1" width="49%" />
-  <img src="readme_photos/Photo02.png" alt="Screenshot 2" width="49%" />
+  <img src="readme_photos/Photo01.jpg" alt="Screenshot 1" width="100%" />
+  
+  <img src="readme_photos/Photo02.png" alt="Screenshot 2" width="100%" />
 </div>
 
 ## ✨ Funcionalidades
