@@ -6,6 +6,7 @@ import Input from '../Forms/Input';
 import { PHOTO_POST } from '../../api';
 import Error from '../Helper/Error';
 import { useNavigate } from 'react-router-dom';
+import { PageHead } from '../Helper/PageHead';
 
 const UserPhotoPost = () => {
   const nome = useForm();
@@ -41,6 +42,7 @@ const UserPhotoPost = () => {
 
   return (
     <section className='animate-animeLeft grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8'>
+      <PageHead title='Postar Foto' description='Publique uma nova foto' />
       <form onSubmit={handleSubmit} className='order-2 md:order-1'>
         <Input label='Nome' type='text' name='nome' {...nome} />
         <Input label='Peso' type='number' name='peso' {...peso} />

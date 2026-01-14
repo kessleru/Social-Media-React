@@ -6,6 +6,7 @@ import Input from '../Forms/Input';
 import { UserContext } from '../../UserContext';
 import useFetch from '../../Hooks/useFetch';
 import Error from '../Helper/Error';
+import { PageHead } from '../Helper/PageHead';
 
 const LoginCreate = () => {
   const username = useForm();
@@ -28,6 +29,7 @@ const LoginCreate = () => {
 
   return (
     <section className='animate-animeLeft mb-8'>
+      <PageHead title='Cadastrar' description='Crie sua conta na rede social' />
       <h1 className='text-neutral-800 relative title font-second after:block after:w-6 after:h-6 after:bg-amber-400 after:absolute after:bottom-1.25 after:-left-1.25 after:rounded-md after:-z-10'>
         Cadastrar-se
       </h1>

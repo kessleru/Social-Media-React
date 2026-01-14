@@ -5,6 +5,7 @@ import useForm from '../../Hooks/useForm';
 import { useContext } from 'react';
 import { UserContext } from '../../UserContext';
 import Error from '../Helper/Error';
+import { PageHead } from '../Helper/PageHead';
 
 const LoginForm = () => {
   const username = useForm();
@@ -22,6 +23,7 @@ const LoginForm = () => {
 
   return (
     <section className='animate-animeLeft'>
+      <PageHead title='Login' description='Faça login para acessar sua conta' />
       <h1 className='text-neutral-800 relative title font-second after:block after:w-6 after:h-6 after:bg-amber-400 after:absolute after:bottom-1.25 after:-left-1.25 after:rounded-md after:-z-10'>
         Login
       </h1>
