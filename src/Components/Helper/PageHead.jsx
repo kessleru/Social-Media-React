@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export function PageHead({ title, description }) {
+function PageHead({ title, description }) {
   const baseTitle = 'Dogs';
 
   useEffect(() => {
@@ -21,3 +21,5 @@ export function PageHead({ title, description }) {
 
   return null;
 }
+
+export default PageHead;

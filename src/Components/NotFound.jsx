@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageHead } from './Helper/PageHead';
+import PageHead from './Helper/PageHead';
 
 const NotFound = () => {
   return (

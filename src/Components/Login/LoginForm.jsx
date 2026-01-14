@@ -5,7 +5,7 @@ import useForm from '../../Hooks/useForm';
 import { useContext } from 'react';
 import { UserContext } from '../../UserContext';
 import Error from '../Helper/Error';
-import { PageHead } from '../Helper/PageHead';
+import PageHead from '../Helper/PageHead';
 
 const LoginForm = () => {
   const username = useForm();
@@ -30,12 +30,14 @@ const LoginForm = () => {
       <form action='' onSubmit={handleSubmit} className='mb-4'>
         <Input label='Usuário' type='text' name='username' {...username} />
         <Input label='Senha' type='password' name='password' {...password} />
-        {loading ? (
-          <Button disabled>Carregando...</Button>
-        ) : (
-          <Button>Entrar</Button>
-        )}
-        <Error error={error} />
+        <div className='flex flex-col items-start'>
+          {loading ? (
+            <Button disabled>Carregando...</Button>
+          ) : (
+            <Button>Entrar</Button>
+          )}
+          <Error error={error} />
+        </div>
       </form>
       <Link
         to='/login/perdeu'

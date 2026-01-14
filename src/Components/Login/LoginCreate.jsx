@@ -6,7 +6,7 @@ import Input from '../Forms/Input';
 import { UserContext } from '../../UserContext';
 import useFetch from '../../Hooks/useFetch';
 import Error from '../Helper/Error';
-import { PageHead } from '../Helper/PageHead';
+import PageHead from '../Helper/PageHead';
 
 const LoginCreate = () => {
   const username = useForm();

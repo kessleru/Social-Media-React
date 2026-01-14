@@ -28,7 +28,7 @@ const Loading = () => {
       aria-label='Carregando conteúdo'
       className='absolute w-full h-screen flex top-0 left-0 z-50'
     >
-      <div className='m-auto size-20 flex items-center justify-center rounded-full bg-neutral-200 pl-1.25'>
+      <div className='m-auto size-20 flex items-center justify-center rounded-full bg-white pl-1.25'>
         <svg
           width='46'
           height='31'

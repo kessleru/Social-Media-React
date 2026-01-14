@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import FeedPhotos from './FeedPhotos';
 import FeedModal from './FeedModal';
+import PageHead from '../Helper/PageHead';
 
 const Feed = ({ user }) => {
   const [modalPhoto, setModalPhoto] = useState(null);
@@ -35,6 +36,10 @@ const Feed = ({ user }) => {
 
   return (
     <div>
+      <PageHead
+        title={user ? 'Minha Conta' : 'Home'}
+        description={user ? 'Veja suas fotos' : 'Feed com fotos dos usuários'}
+      />
       {modalPhoto && (
         <FeedModal setModalPhoto={setModalPhoto} photo={modalPhoto} />
       )}

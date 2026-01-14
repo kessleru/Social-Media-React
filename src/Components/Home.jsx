@@ -1,5 +1,5 @@
 import Feed from './Feed/Feed';
-import { PageHead } from './Helper/PageHead';
+import PageHead from './Helper/PageHead';
 
 const Home = () => {
   return (

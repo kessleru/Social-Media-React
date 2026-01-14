@@ -6,7 +6,7 @@ import Input from '../Forms/Input';
 import { PHOTO_POST } from '../../api';
 import Error from '../Helper/Error';
 import { useNavigate } from 'react-router-dom';
-import { PageHead } from '../Helper/PageHead';
+import PageHead from '../Helper/PageHead';
 
 const UserPhotoPost = () => {
   const nome = useForm();
