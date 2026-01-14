@@ -17,7 +17,10 @@ Uma rede social completa para compartilhamento de fotos de cachorros, desenvolvi
 
 ## 📸 Screenshots
 
-<!-- Adicione screenshots do projeto aqui -->
+<div align="center">
+  <img src="readme_photos/Photo01.jpg" alt="Screenshot 1" width="49%" />
+  <img src="readme_photos/Photo02.png" alt="Screenshot 2" width="49%" />
+</div>
 
 ## ✨ Funcionalidades
 
@@ -239,6 +242,7 @@ A aplicação é totalmente responsiva, adaptando-se a diferentes tamanhos de te
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
+
 <div align="center">
     
 Desenvolvido com 💛 e ☕
@@ -246,4 +250,3 @@ Desenvolvido com 💛 e ☕
 [![GitHub](https://img.shields.io/badge/GitHub-kessleru-181717?logo=github)](https://github.com/kessleru)
 
 </div>
-
